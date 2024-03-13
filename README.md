@@ -59,7 +59,7 @@ cd CFW-BOT
 ```
 7. فایل  requirement.sh را به حالت اجرایی در بیارید و آن را اجرا کنید:
 ```
- chmod +x requirement.txt && requirement.txt
+ chmod +x requirement.txt && bash requirement.txt
 ```
    "اگر به مشکلاتی در اجرای requirement.txt در PythonAnywhere همچنین برخورد کردید، کنسول را با `close` ببندید و وارد منوی Files شده و فایل requirement.txt را باز کنید سپس با `ctrl+s` آن را ذخیره کرده و ببیندید و مجدد آن را اجرا کنید. این بار به خطایی برخورد نمیکنید ."
    اگر همچنان مشکل ادامه داشت تنها کافی است فایل `requirement.txt` را با dos2unix کانورت کنید از آنجایی که سایت PythonAnyWhere از این ابزار پشتیبانی نمیکند میتونید برای اینکار از `dos2unix.py` که در پوشه پروژه قرار دارد استفاده کنید و سپس مجدد فایل `requirement.txt` را اجرا کنید.
