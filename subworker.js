@@ -32,17 +32,17 @@ let link = '';
 let edgetunnel = 'ed';
 let RproxyIP = 'false';
 let proxyIPs = [
-	'176.97.77.32',
-	'cdn.xn--b6gac.eu.org',
-	'cdn-all.xn--b6gac.eu.org',
+	'proxyip.aliyun.fxxk.dedyn.io',
+	'proxyip.multacom.fxxk.dedyn.io',
+	'proxyip.vultr.fxxk.dedyn.io',
 ];
 let CMproxyIPs = [
-	{ proxyIP: "176.97.77.32", type: "HK" },
+	{ proxyIP: "proxyip.fxxk.dedyn.io", type: "HK" },
 ];
 let BotToken ='';
 let ChatID =''; 
-let proxyhosts = [//Local proxy domain name pool
-	//'https://cfw.radicalin.workers.dev',
+let proxyhosts = [//本地代理域名池
+	//'ppfv2tl9veojd-maillazy.pages.dev',
 ];
 let proxyhostsURL = 'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/proxyhosts';//Online proxy domain name pool URL
 let EndPS = '';//Node name remarks
