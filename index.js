@@ -9,10 +9,10 @@ let userID = 'uuid';
 
 let proxyIP = 'newproxy';
 
-//let sub = '';// Leave blank
-let sub = 'subworkerhost';// Built-in preferred subscription generator, which can be built by yourself.github.com/cmliu/WorkerVless2sub
-let subconverter = 'api.v1.mk';// Clash subscription conversion backend ttps://github.com/bulianglin/psub
-let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"; // subscription profile
+//let sub = '';// 留空则显示原版内容
+let sub = 'subworkerhost';// 内置优选订阅生成器，可自行搭建 https://github.com/cmliu/WorkerVless2sub
+let subconverter = 'api.v1.mk';// clash订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
+let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"; //订阅配置文件
 // The user name and password do not contain special characters
 // Setting the address will ignore proxyIP
 // Example:  user:pass@host:port  or  host:port
@@ -25,7 +25,7 @@ if (!isValidUUID(userID)) {
 let parsedSocks5Address = {}; 
 let enableSocks = false;
 
-// Fake uuid and hostname, used to send to the configuration generation service
+// 虚假uuid和hostname，用于发送给配置生成服务
 let fakeUserID = generateUUID();
 let fakeHostName = generateRandomString();
 
@@ -97,7 +97,7 @@ export default {
 			} else {
 				if (new RegExp('/proxyip=', 'i').test(url.pathname)) proxyIP = url.pathname.split("=")[1];
 				else if (new RegExp('/proxyip.', 'i').test(url.pathname)) proxyIP = url.pathname.split("/proxyip.")[1];
-				else if (!proxyIP || proxyIP == '') proxyIP = 'cdn.xn--b6gac.eu.org';
+				else if (!proxyIP || proxyIP == '') proxyIP = 'proxyip.fxxk.dedyn.io';
 				return await vlessOverWSHandler(request);
 			}
 		} catch (err) {
