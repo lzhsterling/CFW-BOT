@@ -1,6 +1,6 @@
-I'm# CFW-BOT
+# CFW-BOT
 
-ربات ورکر کلادفلر! بدون نیاز به سرور، به راحتی میتونید هر تعداد کانفیگ Xray بسازید،  به راحتی در PythonAnywhere اجرا می شود. یک مسیرکوتاه به اینترنت آزاد! ✨
+ربات ساخت وورکر کلادفلر! بدون نیاز به سرور، به راحتی میتونید هر تعداد کانفیگ Xray بسازید،  به راحتی در PythonAnywhere اجرا می شود. یک مسیرکوتاه به اینترنت آزاد! ✨
 
 <p align="center">
   <br><img src="https://github.com/NiREvil/workers-cloudflare/blob/main/Other/pics/CFW%201.png" width="480px">
