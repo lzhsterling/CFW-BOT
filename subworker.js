@@ -1,9 +1,9 @@
 
-// After deployment is complete, add this after the URL，Get the subscriber default node，/auto
+// 部署完成后在网址后面加上这个，获取订阅器默认节点，/auto
 
-let mytoken= 'NiREvil';//Quick subscription access, Leave blank to not activate quick subscription
+let mytoken= 'username';//快速订阅访问入口, 留空则不启动快速订阅
 
-// Set preferred address，Without port number, the default is 443
+// 设置优选地址，不带端口号默认443，不支持非TLS订阅生成
 let addresses = [
 	"go.inmobi.com#CFW-BOT",
 	"creativecommons.org#2ri4eUI",
@@ -16,17 +16,17 @@ let addresses = [
 	
 ];
 
-// Set the preferred address api interface
+// 设置优选地址api接口
 // let addressesapi = ['https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt'];
 let addressesapi = ['addressapi'];
 
-let DLS = 4;//speed lower limit
+let DLS = 4;//速度下限
 let addressescsv = [
-	//'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv' // iptest speed test result file
+	//'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv' //iptest测速结果文件。
 ];
 
-let subconverter = "api.v1.mk"; //The online subscription conversion backend currently uses Feiyang's subscription conversion function. Supports self-built psub and can be built by yourself  https://github.com/bulianglin/psub
-let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"; //Subscription profile
+let subconverter = "api.v1.mk"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
+let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"; //订阅配置文件
 
 let link = '';
 let edgetunnel = 'ed';
@@ -44,8 +44,8 @@ let ChatID ='';
 let proxyhosts = [//本地代理域名池
 	//'ppfv2tl9veojd-maillazy.pages.dev',
 ];
-let proxyhostsURL = 'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/proxyhosts';//Online proxy domain name pool URL
-let EndPS = '';//Node name remarks
+let proxyhostsURL = 'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/proxyhosts';//在线代理域名池URL
+let EndPS = '';//节点名备注内容
 
 let FileName = 'WorkerVless2sub';
 let SUBUpdateTime = 6; 
@@ -127,7 +127,7 @@ async function getAddressescsv() {
 				continue;
 			}
 		
-			const text = await response.text();// Parse text content using correct character encoding
+			const text = await response.text();// 使用正确的字符编码解析文本内容
 			const lines = text.split('\n');
 		
 			// 检查CSV头部是否包含必需字段
@@ -135,20 +135,20 @@ async function getAddressescsv() {
 			const tlsIndex = header.indexOf('TLS');
 			const speedIndex = header.length - 1; // 最后一个字段
 		
-			const ipAddressIndex = 0;// The position of the P address in the CSV header
-			const portIndex = 1;// The position of the port in the CSV header
-			const dataCenterIndex = tlsIndex + 1; // Datacenter is the latter field of TLS
+			const ipAddressIndex = 0;// IP地址在 CSV 头部的位置
+			const portIndex = 1;// 端口在 CSV 头部的位置
+			const dataCenterIndex = tlsIndex + 1; // 数据中心是 TLS 的后一个字段
 		
 			if (tlsIndex === -1) {
 				console.error('CSV文件缺少必需的字段');
 				continue;
 			}
 		
-			// Iterate through CSV rows starting from the second row
+			// 从第二行开始遍历CSV行
 			for (let i = 1; i < lines.length; i++) {
 				const columns = lines[i].split(',');
 		
-				// CheckTLS is not "TRUE" and the speed is greater than DLS
+				// 检查TLS是否为"TRUE"且速度大于DLS
 				if (columns[tlsIndex].toUpperCase() === 'TRUE' && parseFloat(columns[speedIndex]) > DLS) {
 					const ipAddress = columns[ipAddressIndex];
 					const port = columns[portIndex];
