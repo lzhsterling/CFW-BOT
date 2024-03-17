@@ -406,7 +406,7 @@ def create_vless_config(new_subdomain, user_uuid, new_file_name):
 def run_nvm_use_and_wrangler_deploy(new_file_path):
     nvm_source_command = 'source ~/.nvm/nvm.sh && '
 
-    subprocess.run(['bash', '-c', f'{nvm_source_command} nvm use 16.17.0'], check=True)
+    subprocess.run(['bash', '-c', f'{nvm_source_command} nvm use 18.17.0'], check=True)
 
     result = subprocess.run(['bash', '-c', f'{nvm_source_command} npx wrangler deploy {new_file_path}'], capture_output=True, text=True, check=False)
 
