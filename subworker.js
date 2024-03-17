@@ -5,14 +5,14 @@ let mytoken= 'username';//快速订阅访问入口, 留空则不启动快速订�
 
 // 设置优选地址，不带端口号默认443，不支持非TLS订阅生成
 let addresses = [
-	"go.inmobi.com#CFW-BOT",
-	"creativecommons.org#2ri4eUI",
-	"go.inmobi.com:8443#CFW-BOT",
-	"creativecommons.org:8443#2ri4eUI",
-	"go.inmobi.com:2087#CFW-BOT",
-	"creativecommons.org:2087#2ri4eUI",
-	"go.inmobi.com:2096#CFW-BOT",
-	"creativecommons.org:2096#2ri4eUI",
+	"www.speedtest.net#MahsaAmini",
+	"creativecommons.org#CFW-REvil",
+	"go.inmobi.com:8443#MahsaAmini",
+	"www.ipget.net:8443#CFW-REvil",
+	"go.inmobi.com:2087#Freedom",
+	"creativecommons.org:2087#CFW-REvil",
+	"zula.ir:2096#Freedom",
+	"time.cloudflare.com:2096#CFW-REvil",
 	
 ];
 
@@ -32,12 +32,12 @@ let link = '';
 let edgetunnel = 'ed';
 let RproxyIP = 'false';
 let proxyIPs = [
-	'proxyip.aliyun.fxxk.dedyn.io',
-	'proxyip.multacom.fxxk.dedyn.io',
-	'proxyip.vultr.fxxk.dedyn.io',
+	'workers.bestip.one',
+	'workers.bestip.one',
+	'workers.bestip.one',
 ];
 let CMproxyIPs = [
-	{ proxyIP: "proxyip.fxxk.dedyn.io", type: "HK" },
+	{ proxyIP: "workers.bestip.one", type: "HK" },
 ];
 let BotToken ='';
 let ChatID =''; 
