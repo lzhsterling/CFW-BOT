@@ -21,6 +21,7 @@ with open('workertemp.txt', 'w') as file:
             line = f'account_id = "{account_id}"\n'
         file.write(line)
 
-print("✅ Environment Variables and Workertemp Updated. ✅")
-print("🔰 Now You Can Start CFW Bot 🔰")
-print("✌️ Rise UP and Fight For Freedom ✌️")
+print("✋🏿🤝🏿 متغیرها با موفقیت به روز شدند")
+print(" حالا میتونی با دستور شماره نهم بات رو اجرا کنی ")
+print(" تمااام 😎 رباتت اجرا شد الان وقتشه که بری سزاغش تو تلگرام 
+Rise UP and Fight For Freedom ✌️")
