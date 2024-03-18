@@ -202,7 +202,7 @@ def qr_vless(call):
     qr_img.save(img_bytes, format='PNG')
     img_bytes.seek(0)
 
-    bot.send_photo(call.message.chat.id, img_bytes, caption="🤳 Scan Me! 🤳")
+    bot.send_photo(call.message.chat.id, img_bytes, caption=" Scan Me dude ⚡")
 
     del img_bytes
 @bot.callback_query_handler(func=lambda call: call.data.startswith('delete:'))
@@ -221,10 +221,10 @@ def delete_user(call):
     connection.close()
 
     menu_markup = InlineKeyboardMarkup()
-    add_user_button = InlineKeyboardButton("➕ Add User", callback_data="add_user")
-    user_panel_button = InlineKeyboardButton("🔰 User Panel", callback_data="user_panel")
+    add_user_button = InlineKeyboardButton("➕ افزودن کاربر", callback_data="add_user")
+    user_panel_button = InlineKeyboardButton("🔹 پنل کاربران", callback_data="user_panel")
     menu_markup.add(add_user_button, user_panel_button)
-    bot.send_message(call.message.chat.id, f"✅ Worker for user '{user_name}' deleted successfully.✅", reply_markup=menu_markup)
+    bot.send_message(call.message.chat.id, f" وورکر  '{user_name}' با موفقیت حذف شد ✔", reply_markup=menu_markup)
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith('add_user'))
 def add_user_cfw(call):
