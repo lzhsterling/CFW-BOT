@@ -40,12 +40,12 @@ def authorize(message):
 
 def send_welcome(message):
     menu_markup = InlineKeyboardMarkup()
-    add_user_button = InlineKeyboardButton("➕ کاربر جدید ", callback_data="add_user")
-    user_panel_button = InlineKeyboardButton(" 🎭 پنل ", callback_data="user_panel")
-    subscriptions_button = InlineKeyboardButton("📋 مخزن آی پی ", callback_data="subscriptions") 
+    add_user_button = InlineKeyboardButton("➕ کاربر جدید", callback_data="add_user")
+    user_panel_button = InlineKeyboardButton("🎭 پنل", callback_data="user_panel")
+    subscriptions_button = InlineKeyboardButton("📋 مخزن آی پی", callback_data="subscriptions") 
     menu_markup.add(add_user_button, user_panel_button)  
     menu_markup.add(subscriptions_button)  
-    welcome_message = "✅ شروع به کار ربات CFW ✅\n            FREEDOM TO DREAM 🤍 "
+    welcome_message = "✅شروع به کار CFW \n  </b>FREEDOM TO DREAM</b> 🤍  "
     
     bot.send_message(message.chat.id, welcome_message, reply_markup=menu_markup)
 
@@ -158,7 +158,7 @@ def user_info_callback(call):
 
         bot.send_message(call.message.chat.id, message_text, reply_markup=keyboard, parse_mode="HTML")
     else:
-        bot.send_message(call.message.chat.id, "❌ کاربر یافت نشد.❌")
+        bot.send_message(call.message.chat.id, "❌کاربر یافت نشد❌")
 
 def delete_worker(account_id, api_token, worker_name):
     url = f"https://api.cloudflare.com/client/v4/accounts/{account_id}/workers/scripts/{worker_name}"
@@ -222,9 +222,9 @@ def delete_user(call):
 
     menu_markup = InlineKeyboardMarkup()
     add_user_button = InlineKeyboardButton("➕ کاربر جدید ", callback_data="add_user")
-    user_panel_button = InlineKeyboardButton(" 🎭 پنل ", callback_data="user_panel")
+    user_panel_button = InlineKeyboardButton("🎭 پنل ", callback_data="user_panel")
     menu_markup.add(add_user_button, user_panel_button)
-    bot.send_message(call.message.chat.id, f" وورکر  '{user_name}' با موفقیت حذف شد ✔", reply_markup=menu_markup)
+    bot.send_message(call.message.chat.id, f" وورکر '{user_name}' با موفقیت حذف شد ✔", reply_markup=menu_markup)
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith('add_user'))
 def add_user_cfw(call):
@@ -259,13 +259,13 @@ def handle_filename(message):
     connection.close()
     
     if existing_user:
-        bot.send_message(message.chat.id, "نام کاربر انتخابی شما از قبل وجود دارد. !\n  لطفا نام دیگری انتخاب کنید. ")
+        bot.send_message(message.chat.id, " نام کاربر انتخابی شما از قبل وجود دارد. \nلطفا نام دیگری انتخاب کنید. ")
     else:
         new_file_path = os.path.join(users_directory, new_file_name)
         new_subsfile_path = os.path.join(users_directory, new_subfile_name)
         create_duplicate_file(index_js_path, new_file_path)
         create_duplicate_file(subs_js_path, new_subsfile_path)
-        bot.send_message(message.chat.id, f"کاربر '{new_file_name}' ایجاد شد.✅")
+        bot.send_message(message.chat.id, f"وورکر برای کاربر جدید با نام '{new_file_name}' ایجاد شد.✅")
         
         user_uuid = generate_uuid()
         replace_uuid_in_file(user_uuid, new_file_path)
@@ -278,7 +278,7 @@ def handle_filename(message):
         connection.commit()
         connection.close()
         user_states[message.from_user.id] = {'state': 'waiting_for_proxy', 'file_name':  new_file_name, 'uuid': user_uuid}
-        bot.send_message(message.chat.id, "لطفا دامنه یا پروکسی آی‌پی دلخواه خود را وارد کنید. !\n درصورت نداشتن پروکسی آی‌پی - آی‌پی تمیز کلادفلر ارسال کنید. !\n نکته: در صورت عدم ارسال پروکسی آی‌پی احتمال اینکه سایت‌های پشت کلافلر برای شما باز نشوند سی الی پنجاه درصد می‌باشد. ")
+        bot.send_message(message.chat.id, "لطفا دامنه یا پروکسی آی‌پی دلخواه خود را وارد کنید \nدرصورت نداشتن پروکسی آی‌پی .آی‌پی تمیز کلادفلر ارسال کنید \nنکته: در صورت عدم ارسال پروکسی آی‌پی احتمال اینکه سایت‌های پشت کلافلر برای شما باز نشوند سی الی پنجاه درصد می‌باشد.")
 
 @bot.message_handler(func=lambda message: user_states.get(message.from_user.id, {}).get('state') == 'waiting_for_proxy')
 def handle_proxy(message):
@@ -309,7 +309,7 @@ def handle_proxy(message):
     connection.commit()
     connection.close()
     user_states[message.from_user.id]['state'] = 'waiting_for_subdomain_or_worker_name'
-    bot.send_message(message.chat.id, "لطفا یک ساب دامنه‌ی جدید برای وورکر خود تعیین کنید: \n ℹ️ برای مثال: subdomain.yourdomain.com \n\n ℹ️ℹ️ از دامنه‌ای که در اکانت کلادفلر شما فعال نمی‌باشد استفاده نکنید. ")    
+    bot.send_message(message.chat.id, "لطفا یک ساب دامنه‌ی جدید برای وورکر خود تعیین کنید: \nℹ️برای مثال: subdomain.yourdomain.com \n\nℹ️ℹ️از دامنه‌ای که در اکانت کلادفلر شما فعال نمی‌باشد استفاده نکنید.")    
 
 @bot.message_handler(func=lambda message: user_states.get(message.from_user.id, {}).get('state') == 'waiting_for_subdomain_or_worker_name')
 def handle_subdomain_and_worker_name(message):
@@ -328,7 +328,7 @@ def handle_subdomain_and_worker_name(message):
     connection.close()
 
     if existing_user:
-        bot.send_message(message.chat.id, f"❌ساب دامنه انتخابی شما '{new_subdomain}' از قبل موجود می‌باشد. لطفا ساب دامنه دیگری انتخاب کنید.❌ !\n  اگر قبلا عملیات ناموفق داشتید به پنل مراجعه کرده و اقدام به حذف آن کاربر نمایید. ")
+        bot.send_message(message.chat.id, f"❌ساب دامنه انتخابی شما '{new_subdomain}' از قبل موجود می‌باشد. لطفا ساب دامنه دیگری انتخاب کنید.❌ \nاگر قبلا عملیات ناموفق داشتید به پنل مراجعه کرده و اقدام به حذف آن کاربر نمایید.")
         
     else:
         new_file_name = user_states[message.from_user.id]['file_name']
@@ -354,10 +354,10 @@ def handle_subdomain_and_worker_name(message):
         subworker_host = f"sub{new_subdomain}"
         replace_subworker_host(subworker_host, new_file_path)
         replace_subdomain_in_file(subworker_host, new_txt_subfile_path)
-        bot.send_message(message.chat.id, f"🪩 در حال ساخت پروفایل کاربر جدید \n ⏱ لطفا منتظر بمانید. زمان تقریبی یک الی دو دقیقه ")
+        bot.send_message(message.chat.id, f"🪩 در حال تلاش برای ساخت وورکر جدید 🪩\n       لطفا منتظر بمانید، زمان تقریبی 60s")
         
         update_wrangler_toml(new_txt_file_path)
-        sent_message = bot.send_message(message.chat.id, "⏱")
+        sent_message = bot.send_message(message.chat.id, "⏰  ")
         wait_message_id = sent_message.message_id
 
         
@@ -374,13 +374,13 @@ def handle_subdomain_and_worker_name(message):
         
         if deployment_status:
             bot.delete_message(message.chat.id, wait_message_id)
-            bot.send_message(message.chat.id, "✅✅ ساخت وورکر جدید با موفقیت به اتمام رسید. چند لحظه صبر کنید. ")
+            bot.send_message(message.chat.id, "ساخت وورکر جدید 🪄 با موفقیت به اتمام رسید. \nچند لحظه منتظر بمانید. 🗿 🚬🚬🚬")
             update_wrangler_toml(new_txt_subfile_path)
             run_nvm_use_and_wrangler_deploy(new_subsfile_path)
             vless_config = create_vless_config(new_subdomain, user_uuid, new_file_name)
             sub_link = f"https://{subworker_host}/{new_file_name_without_extension}"
             vless_config_html = f"<code>{vless_config}</code>"
-            message_text = f"کانفیگ: {vless_config_html}\n\nلینک ساب: {sub_link}"
+            message_text = f"کانفیگ:\n {vless_config_html}\n\nلینک ساب:\n {sub_link}"
             menu_markup = InlineKeyboardMarkup()
             add_user_button = InlineKeyboardButton("➕ کاربر جدید ", callback_data="add_user")
             user_panel_button = InlineKeyboardButton(" 🎭 پنل ", callback_data="user_panel")
@@ -391,10 +391,10 @@ def handle_subdomain_and_worker_name(message):
         else:
             bot.delete_message(message.chat.id, wait_message_id)
             menu_markup = InlineKeyboardMarkup()
-            add_user_button = InlineKeyboardButton("➕ کاربر جدید ", callback_data="add_user")
-            user_panel_button = InlineKeyboardButton(" 🎭 پنل ", callback_data="user_panel")
+            add_user_button = InlineKeyboardButton("➕ کاربر جدید", callback_data="add_user")
+            user_panel_button = InlineKeyboardButton("🎭 پنل", callback_data="user_panel")
             menu_markup.add(add_user_button, user_panel_button)
-            bot.send_message(message.chat.id, "❌ عملیات ناموفق ❌ \n به صفحه گزارشات (log) در کنسول پایتون (pythonanywhere) مراجعه کنید. ", reply_markup=menu_markup)
+            bot.send_message(message.chat.id, "❌ عملیات ناموفق ❌\nبه صفحه گزارشات (log) در کنسول (pythonanywhere) مراجعه کنید.", reply_markup=menu_markup)
 
 def create_vless_config(new_subdomain, user_uuid, new_file_name):
     if new_file_name.endswith('.js'):
@@ -516,5 +516,5 @@ def start_bot():
             time.sleep(10)
 
 if __name__ == "__main__":
-    print("✅ آماده انجام عملیات جدید  \n            FREEDOM TO DREAM 🤍 ")
+    print("✅ آماده انجام عملیات جدید  \n  </b>FREEDOM TO DREAM</b> 🤍  ")
     start_bot()
