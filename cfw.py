@@ -45,7 +45,7 @@ def send_welcome(message):
     subscriptions_button = InlineKeyboardButton("📋 مخزن آی پی", callback_data="subscriptions") 
     menu_markup.add(add_user_button, user_panel_button)  
     menu_markup.add(subscriptions_button)  
-    welcome_message = "✅شروع به کار CFW \n  </b>FREEDOM TO DREAM</b> 🤍  "
+    welcome_message = "✅شروع به کار CFW \n  FREEDOM TO DREAM 🤍  "
     
     bot.send_message(message.chat.id, welcome_message, reply_markup=menu_markup)
 
@@ -516,5 +516,5 @@ def start_bot():
             time.sleep(10)
 
 if __name__ == "__main__":
-    print("✅ آماده انجام عملیات جدید  \n  </b>FREEDOM TO DREAM</b> 🤍  ")
+    print("✅تبریک، ربات شما با موفقیت ساخته شد، لطفا آن را در تلگرام استارت کنید.\n                                        FREEDOM TO DREAM 🤍 ")
     start_bot()
