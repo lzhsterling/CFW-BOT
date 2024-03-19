@@ -1,51 +1,51 @@
 
-// 部署完成后在网址后面加上这个，获取订阅器默认节点，/auto
+//After deployment is complete, add this "/auto" after the URL to get the subscriber default node
 
-let mytoken= 'username';//快速订阅访问入口, 留空则不启动快速订阅
+let mytoken= 'username';//Quick subscription access entry, leave it blank to not start quick subscription
 
-// 设置优选地址，不带端口号默认443，不支持非TLS订阅生成
+// Set the preferred address. The default port number is 443. Non-TLS subscription generation is not supported.
 let addresses = [
-	"www.speedtest.net#MahsaAmini",
-	"creativecommons.org#CFW-REvil",
-	"go.inmobi.com:8443#MahsaAmini",
-	"www.ipget.net:8443#CFW-REvil",
-	"go.inmobi.com:2087#Freedom",
-	"creativecommons.org:2087#CFW-REvil",
-	"zula.ir:2096#Freedom",
-	"time.cloudflare.com:2096#CFW-REvil",
+	"go.inmobi.com#CFW",
+	"creativecommons.org#CFW",
+	"go.inmobi.com:8443#CFW",
+	"creativecommons.org:8443#CFW",
+	"go.inmobi.com:2087#CFW",
+	"creativecommons.org:2087#CFW",
+	"go.inmobi.com:2096#Freedom",
+	"creativecommons.org:2096#CFW",
 	
 ];
 
-// 设置优选地址api接口
+// Set the preferred address API interface
 // let addressesapi = ['https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt'];
 let addressesapi = ['addressapi'];
 
-let DLS = 4;//速度下限
+let DLS = 4;//Speed limit
 let addressescsv = [
-	//'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv' //iptest测速结果文件。
+	//'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv' // Speed test result file.
 ];
 
-let subconverter = "api.v1.mk"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
-let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"; //订阅配置文件
+let subconverter = "api.v1.mk"; //Online subscription conversion backend, currently using Feiyang's subscription conversion function. Supports self-built psub - https://github.com/bulianglin/psub
+let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"; //Subscription Profile
 
 let link = '';
 let edgetunnel = 'ed';
 let RproxyIP = 'false';
 let proxyIPs = [
-	'workers.bestip.one',
-	'workers.bestip.one',
-	'workers.bestip.one',
+	'proxyip.aliyun.fxxk.dedyn.io',
+	'proxyip.multacom.fxxk.dedyn.io',
+	'proxyip.vultr.fxxk.dedyn.io',
 ];
 let CMproxyIPs = [
-	{ proxyIP: "workers.bestip.one", type: "HK" },
+	{ proxyIP: "proxyip.fxxk.dedyn.io", type: "HK" },
 ];
 let BotToken ='';
 let ChatID =''; 
-let proxyhosts = [//本地代理域名池
+let proxyhosts = [//Local proxy domain name pool
 	//'ppfv2tl9veojd-maillazy.pages.dev',
 ];
-let proxyhostsURL = 'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/proxyhosts';//在线代理域名池URL
-let EndPS = '';//节点名备注内容
+let proxyhostsURL = 'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/proxyhosts';//Online proxy domain pool URL
+let EndPS = '';//Node name remarks
 
 let FileName = 'WorkerVless2sub';
 let SUBUpdateTime = 6; 
@@ -127,28 +127,28 @@ async function getAddressescsv() {
 				continue;
 			}
 		
-			const text = await response.text();// 使用正确的字符编码解析文本内容
+			const text = await response.text();// Parse text content using the correct character encoding
 			const lines = text.split('\n');
 		
-			// 检查CSV头部是否包含必需字段
+			// Check if the CSV header contains required fields
 			const header = lines[0].split(',');
 			const tlsIndex = header.indexOf('TLS');
-			const speedIndex = header.length - 1; // 最后一个字段
+			const speedIndex = header.length - 1; // The last field
 		
-			const ipAddressIndex = 0;// IP地址在 CSV 头部的位置
-			const portIndex = 1;// 端口在 CSV 头部的位置
-			const dataCenterIndex = tlsIndex + 1; // 数据中心是 TLS 的后一个字段
+			const ipAddressIndex = 0;// Location of IP address in CSV header
+			const portIndex = 1;// Port location in CSV header
+			const dataCenterIndex = tlsIndex + 1; // Data center is the last field of TLS
 		
 			if (tlsIndex === -1) {
 				console.error('CSV文件缺少必需的字段');
 				continue;
 			}
 		
-			// 从第二行开始遍历CSV行
+			// Iterate over the CSV rows starting from the second row
 			for (let i = 1; i < lines.length; i++) {
 				const columns = lines[i].split(',');
 		
-				// 检查TLS是否为"TRUE"且速度大于DLS
+				// Check if TLS is "TRUE" and the speed is greater than DLS
 				if (columns[tlsIndex].toUpperCase() === 'TRUE' && parseFloat(columns[speedIndex]) > DLS) {
 					const ipAddress = columns[ipAddressIndex];
 					const port = columns[portIndex];
@@ -204,10 +204,10 @@ export default {
 					}
 	
 					const base64Text = await subconverterResponse.text();
-					link = atob(base64Text); // 进行 Baae64 解码
+					link = atob(base64Text); // Perform Baae64 decoding
 	
 				} catch (error) {
-					// 错误处理
+					// Error handling
 				}	
 			}
 		await sendMessage("#获取订阅", request.headers.get('CF-Connecting-IP'), `UA: ${userAgent}</tg-spoiler>\n域名: ${url.hostname}\n<tg-spoiler>入口: ${url.pathname + url.search}</tg-spoiler>`);
@@ -267,7 +267,7 @@ export default {
 			if (!path || path.trim() === '') {
 				path = '/?ed=2048';
 			} else {
-				// 如果第一个字符不是斜杠，则在前面添加一个斜杠
+				// If the first character is not a slash, add a slash in front of it.
 				path = (path[0] === '/') ? path : '/' + path;
 			}
 		}
@@ -334,12 +334,12 @@ export default {
 					
 						if (!response.ok) {
 							console.error('获取地址时出错:', response.status, response.statusText);
-							return; // 如果有错误，直接返回
+							return; // If there is an error, return directly
 						}
 					
 						const text = await response.text();
 						const lines = text.split('\n');
-						// 过滤掉空行或只包含空白字符的行
+						// Filter out empty lines or lines containing only whitespace characters
 						const nonEmptyLines = lines.filter(line => line.trim() !== '');
 					
 						proxyhosts = proxyhosts.concat(nonEmptyLines);
@@ -347,7 +347,7 @@ export default {
 						console.error('获取地址时出错:', error);
 					}
 				}
-				// 使用Set对象去重
+				// Use Set object to remove duplicates
 				proxyhosts = [...new Set(proxyhosts)];
 			}
 			
@@ -356,7 +356,7 @@ export default {
 			addresses = addresses.concat(newAddressesapi);
 			addresses = addresses.concat(newAddressescsv);
 			
-			// 使用Set对象去重
+			// Use Set object to remove duplicates
 			const uniqueAddresses = [...new Set(addresses)];
 			
 			const responseBody = uniqueAddresses.map(address => {
@@ -384,24 +384,24 @@ export default {
 				}
 				
 				if (edgetunnel.trim() === 'cmliu' && RproxyIP.trim() === 'true') {
-					// 将addressid转换为小写
+					// Convert addressid to lowercase
 					let lowerAddressid = addressid.toLowerCase();
-					// 初始化找到的proxyIP为null
+					// Initialize the found proxyIP to nulll
 					let foundProxyIP = null;
 				
-					// 遍历CMproxyIPs数组查找匹配项
+					// Reverse the CMproxyIPs array to find matching items
 					for (let item of CMproxyIPs) {
 						if (lowerAddressid.includes(item.type.toLowerCase())) {
 							foundProxyIP = item.proxyIP;
-							break; // 找到匹配项，跳出循环
+							break; // Find a match and break out of the loop
 						}
 					}
 				
 					if (foundProxyIP) {
-						// 如果找到匹配的proxyIP，赋值给path
+						// If a matching proxyIP is found, assign it to path
 						path = `/proxyIP=${foundProxyIP}`;
 					} else {
-						// 如果没有找到匹配项，随机选择一个proxyIP
+						// If no match is found, a proxyIP is randomly selected
 						const randomProxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
 						path = `/proxyIP=${randomProxyIP}`;
 					}
@@ -413,15 +413,15 @@ export default {
 				if(proxyhosts && (host.includes('workers.dev') || host.includes('pages.dev'))) {
 					最终路径 = `/${host}${path}`;
 					伪装域名 = proxyhosts[Math.floor(Math.random() * proxyhosts.length)];
-					节点备注 = `${EndPS} 已启用临时域名中转服务，请尽快绑定自定义域！`;
+					节点备注 = `${EndPS} REvil`;
 				}
 				const vlessLink = `vless://${uuid}@${address}:${port}?encryption=none&security=tls&sni=${伪装域名}&fp=random&type=ws&host=${伪装域名}&path=${encodeURIComponent(最终路径)}#${encodeURIComponent(addressid + 节点备注)}`;
 			
 				return vlessLink;
 			}).join('\n');
 			
-			const combinedContent = responseBody + '\n' + link; // 合并内容
-			const base64Response = btoa(combinedContent); // 重新进行 Base64 编码
+			const combinedContent = responseBody + '\n' + link; // Merge content
+			const base64Response = btoa(combinedContent); // Re-encode the data in Base64
 
 
 			const response = new Response(base64Response, {
