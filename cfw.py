@@ -278,7 +278,7 @@ def handle_filename(message):
         connection.commit()
         connection.close()
         user_states[message.from_user.id] = {'state': 'waiting_for_proxy', 'file_name':  new_file_name, 'uuid': user_uuid}
-        bot.send_message(message.chat.id, "لطفا دامنه یا پروکسی آی‌پی دلخواه خود را وارد کنید \nدرصورت نداشتن پروکسی آی‌پی .آی‌پی تمیز کلادفلر ارسال کنید \nنکته: در صورت عدم ارسال پروکسی آی‌پی احتمال اینکه سایت‌های پشت کلافلر برای شما باز نشوند سی الی پنجاه درصد می‌باشد.")
+        bot.send_message(message.chat.id, "لطفا دامنه یا پروکسی آی‌پی دلخواه خود را وارد کنید \nدرصورت نداشتن پروکسی آی‌پی ،آی‌پی تمیز کلادفلر ارسال کنید \nنکته: در صورت عدم ارسال پروکسی آی‌پی احتمال اینکه سایت‌های پشت کلافلر برای شما باز نشوند سی الی پنجاه درصد می‌باشد.")
 
 @bot.message_handler(func=lambda message: user_states.get(message.from_user.id, {}).get('state') == 'waiting_for_proxy')
 def handle_proxy(message):
@@ -309,7 +309,7 @@ def handle_proxy(message):
     connection.commit()
     connection.close()
     user_states[message.from_user.id]['state'] = 'waiting_for_subdomain_or_worker_name'
-    bot.send_message(message.chat.id, "لطفا یک ساب دامنه‌ی جدید برای وورکر خود تعیین کنید: \nℹ️برای مثال: subdomain.yourdomain.com \n\nℹ️ℹ️از دامنه‌ای که در اکانت کلادفلر شما فعال نمی‌باشد استفاده نکنید.")    
+    bot.send_message(message.chat.id, "لطفا یک ساب دامنه‌ی جدید برای وورکر خود تعیین کنید: \n⚙️برای مثال: subdomain.yourdomain.com \n\n⚠️ از دامنه‌ای که در اکانت کلادفلر شما فعال نمی‌باشد استفاده نکنید.")    
 
 @bot.message_handler(func=lambda message: user_states.get(message.from_user.id, {}).get('state') == 'waiting_for_subdomain_or_worker_name')
 def handle_subdomain_and_worker_name(message):
