@@ -5,13 +5,13 @@ let mytoken= 'username';//Quick subscription access entry, leave it blank to not
 
 // Set the preferred address. The default port number is 443. Non-TLS subscription generation is not supported.
 let addresses = [
-	"go.inmobi.com#CFW",
+	"go.inmobi.com#CFW-REvil",
 	"creativecommons.org#CFW",
-	"go.inmobi.com:8443#CFW",
+	"go.inmobi.com:8443#CFW-REvil",
 	"creativecommons.org:8443#CFW",
-	"go.inmobi.com:2087#CFW",
+	"go.inmobi.com:2087#CFW-REvil",
 	"creativecommons.org:2087#CFW",
-	"go.inmobi.com:2096#Freedom",
+	"go.inmobi.com:2096#CFW-REvil",
 	"creativecommons.org:2096#CFW",
 	
 ];
@@ -34,7 +34,7 @@ let RproxyIP = 'false';
 let proxyIPs = [
 	'proxyip.aliyun.fxxk.dedyn.io',
 	'proxyip.multacom.fxxk.dedyn.io',
-	'proxyip.vultr.fxxk.dedyn.io',
+	'workers.bestip.one',
 ];
 let CMproxyIPs = [
 	{ proxyIP: "proxyip.fxxk.dedyn.io", type: "HK" },
