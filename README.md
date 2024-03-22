@@ -142,7 +142,7 @@ server=="cloudflare" && port=="443" && country=="NL" && city=="Amsterdam"
    ------
   **~هر سوالی از هر بخش که داشتید تو تلگرام داخل کامنت‌ها بپرسید.**
 
-  
+
 [![Telegram Badge](https://img.shields.io/badge/Telegram-Profile-informational?style=flat&logo=telegram&logoColor=white&color=1CA2F1)](https://t.me/F_NiREvil)
    
 
