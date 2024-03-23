@@ -45,7 +45,7 @@ let proxyhosts = [//Local proxy domain name pool
 	//'ppfv2tl9veojd-maillazy.pages.dev',
 ];
 let proxyhostsURL = 'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/proxyhosts';//Online proxy domain pool URL
-let EndPS = '';//Node name remarks
+let EndPS = 'REvil';//Node name remarks
 
 let FileName = 'WorkerVless2sub';
 let SUBUpdateTime = 6; 
