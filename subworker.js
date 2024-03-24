@@ -6,14 +6,14 @@ let mytoken= 'username';//Quick subscription access entry, leave it blank to not
 // Set the preferred address. The default port number is 443. Non-TLS subscription generation is not supported.
 let addresses = [
 	"go.inmobi.com#CFW-REvil",
-	"creativecommons.org#CFW",
-	"go.inmobi.com:8443#CFW-REvil",
+	"creativecommons.org#CFW-REvil",
+	"go.inmobi.com:8443#CFW",
 	"creativecommons.org:8443#CFW",
-	"go.inmobi.com:2087#CFW-REvil",
-	"www.speedtest.net:443#CFW-REvil",
+	"go.inmobi.com:2087#CFW",
+	"www.speedtest.net:443#CFW",
 	"www.ipget.net:8443#CFW",
 	"creativecommons.org:2087#CFW",
-	"go.inmobi.com:2096#CFW-REvil",
+	"go.inmobi.com:2096#CFW",
 	"creativecommons.org:2096#CFW",
 	
 ];
