@@ -1,7 +1,7 @@
 
 //After deployment is complete, add this "/auto" after the URL to get the subscriber default node
 
-let mytoken= 'username';//Quick subscription access entry, leave it blank to not start quick subscription
+let mytoken= 'username';//Quick subscription access entry, leave it blank to not start quick subscription.
 
 // Set the preferred address. The default port number is 443. Non-TLS subscription generation is not supported.
 let addresses = [
@@ -10,6 +10,8 @@ let addresses = [
 	"go.inmobi.com:8443#CFW-REvil",
 	"creativecommons.org:8443#CFW",
 	"go.inmobi.com:2087#CFW-REvil",
+	"www.speedtest.net:443#CFW-REvil",
+	"www.visa.co.jp:8443#CFW",
 	"creativecommons.org:2087#CFW",
 	"go.inmobi.com:2096#CFW-REvil",
 	"creativecommons.org:2096#CFW",
@@ -34,7 +36,7 @@ let RproxyIP = 'false';
 let proxyIPs = [
 	'proxyip.aliyun.fxxk.dedyn.io',
 	'proxyip.multacom.fxxk.dedyn.io',
-	'workers.bestip.one',
+	'proxyip.vultr.fxxk.dedyn.io',
 ];
 let CMproxyIPs = [
 	{ proxyIP: "proxyip.fxxk.dedyn.io", type: "HK" },
@@ -45,7 +47,7 @@ let proxyhosts = [//Local proxy domain name pool
 	//'ppfv2tl9veojd-maillazy.pages.dev',
 ];
 let proxyhostsURL = 'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/proxyhosts';//Online proxy domain pool URL
-let EndPS = 'REvil';//Node name remarks
+let EndPS = '';//Node name remarks
 
 let FileName = 'WorkerVless2sub';
 let SUBUpdateTime = 6; 
