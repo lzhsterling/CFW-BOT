@@ -11,7 +11,7 @@ let addresses = [
 	"creativecommons.org:8443#CFW",
 	"go.inmobi.com:2087#CFW-REvil",
 	"www.speedtest.net:443#CFW-REvil",
-	"www.visa.co.jp:8443#CFW",
+	"www.ipget.net:8443#CFW",
 	"creativecommons.org:2087#CFW",
 	"go.inmobi.com:2096#CFW-REvil",
 	"creativecommons.org:2096#CFW",
