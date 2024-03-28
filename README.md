@@ -9,7 +9,7 @@ Cloudflare Woker Bot ! No servers needed, just pure Xray link creation, all runn
 </p>
 
 
-# What is NEW at least update ?
+# New changes in the latest version!!
 - added proxies.txt , now you can create your favorite proxy list in bot
 - access to your favorite proxy while adding new user or changing users proxies
 - access to recently used proxies
