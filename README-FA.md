@@ -1,3 +1,5 @@
+[Explain in English 🇬🇧](https://github.com/NiREvil/CFW-BOT/blob/main/README.md)
+
 # CFW-BOT
 > Cloudflare workers bot
 
