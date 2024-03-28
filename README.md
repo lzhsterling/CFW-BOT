@@ -1,5 +1,4 @@
-[توضیحات در فارسی](https://github.com/NiREvil/CFW-BOT/blob/main/README-FA.md) 
-
+[توضیحات در فارسی 🇮🇷](https://github.com/NiREvil/CFW-BOT/blob/main/README-FA.md)
 
 # CFW-BOT 
 Cloudflare Woker Bot ! No servers needed, just pure Xray link creation, all running smoothly on PythonAnywhere. a Shortcut to internet freedom! ✨"
