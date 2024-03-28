@@ -50,7 +50,7 @@ def send_welcome(message):
     menu_markup.add(add_user_button, user_panel_button)  
     menu_markup.add(subscriptions_button)
     menu_markup.add(proxy_txt_button)
-    welcome_message = "Welcome to C-F-W Bot (v0.03)!\n🤍 Freedom to Dream \n "
+    welcome_message = "✨ Welcome to CFW-Bot v0.3.0\n🤍 Freedom to Dream \n "
     
     bot.send_message(message.chat.id, welcome_message, reply_markup=menu_markup)
 
@@ -970,5 +970,5 @@ def start_bot():
             time.sleep(10)
 
 if __name__ == "__main__":
-    print("✅ CFW BOT STARTED\n🤍 Freedom to Dream ")
+    print("✨ CFW BOT STARTED\n🤍 Freedom to Dream ")
     start_bot()
