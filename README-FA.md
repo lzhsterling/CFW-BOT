@@ -1,4 +1,4 @@
-[Explain in English 🇬🇧](https://github.com/NiREvil/CFW-BOT/blob/main/README.md)
+[🇬🇧Explain in English](README.md)
 
 # CFW-BOT
 > Cloudflare workers bot
@@ -6,11 +6,11 @@
 ### ربات تلگرام برای ایجاد وورکر و کانفیگ‌های v2ray‌ بر بستر کلادفلر
 
 بدون نیاز به سرور، به راحتی میتونید هر تعداد کانفیگ vless-ws-tls که خواستید بسازید، با چند کلیک از داخل ربات، این قطعه کد پایتون در phytonanywhere یا هر سرویس دیگه‌ای که از پایتون میزبانی بکنه میشه اجرا کرد.
-یه میانبر کوچک برای **دسترسی به اینترنت آزاد. 🤍✨**
+یه میانبر کوچک برای **دسترسی به اینترنت آزاد 🤍✨**
 
 
 <p align="left">
-  <br><img src="https://github.com/NiREvil/workers-cloudflare/blob/main/Other/pics/CFW%203.png" width="420px">
+  <br><img src="https://github.com/NiREvil/workers-cloudflare/blob/main/Other/pics/CFW%203.png" width="240px">
 </p>
 
 ## آموزش کامل در یوتیوب: 
