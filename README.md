@@ -1,14 +1,22 @@
+---
+
+$$\color{silver} \Huge \text{\R $\sum{\vil_c = \mathbb{N\infty}}$}$$
+
+---
+---
+# $\color{gold} \large \text{CFW-BOT}$
+> $\color{silver} \large \text{Cloudflare Woker Bot ! No servers needed, just pure Xray link creation, all running smoothly on PythonAnywhere.}$
+> $\color{silver} \large \text{A Shortcut to internet freedom ✨}$
+
 [**![Lang_farsi](https://user-images.githubusercontent.com/125398461/234186932-52f1fa82-52c6-417f-8b37-08fe9250a55f.png) توضیحات فارسی**](README-FA.md)
 
-# CFW-BOT 
-Cloudflare Woker Bot ! No servers needed, just pure Xray link creation, all running smoothly on PythonAnywhere. a Shortcut to internet freedom! ✨"
 
 <p align="left">
-  <br><img src="https://github.com/NiREvil/workers-cloudflare/blob/main/Other/pics/CFW%203.png" width="420px">
+  <br><img src="https://github.com/NiREvil/workers-cloudflare/blob/main/Other/pics/CFW%203.png" width="360px">
 </p>
 
 
-# New changes in the latest version!!
+# $\color{gold} \large \text{New changes in the latest version!!}$
 - added proxies.txt , now you can create your favorite proxy list in bot
 - access to your favorite proxy while adding new user or changing users proxies
 - access to recently used proxies
@@ -21,7 +29,7 @@ Cloudflare Woker Bot ! No servers needed, just pure Xray link creation, all runn
 - cloudflare webiste error solved
   
   
-## Table of Contents
+## $\color{gold} \large \text{Table of Contents}$
 - [What is this ?](#what-is-this-)
   - [Features](#features)
   - [Prerequisites](#prerequisites)
@@ -31,22 +39,22 @@ Cloudflare Woker Bot ! No servers needed, just pure Xray link creation, all runn
 - [Note](#note)
 - [Disclaimer](#disclaimer)
 
-# What is this ?
+# $\color{gold} \large \text{What is this ?}$
 This Python Telegram bot, powered by Cloudflare's Workers, makes generating Xray links a breeze! No need for complex server setups, just follow these simple steps to get started:
-## Features
+## $\color{gold} \large \text{Features}$
 - **Easy Setup**: No server configurations required. With Cloudflare's Workers, deploying the bot is a breeze.
 - **Persistent Storage**: Utilizes SQLite for database management, ensuring that your user data and generated links are securely stored.
 - **User Management**: Create and manage multiple users with ease. Each user has access to their generated links at all times.
 - **Efficient Deployment**: Leveraging Wrangler, the bot's worker script can be easily deployed on Cloudflare, ensuring reliability and scalability.
 
-## Prerequisites
+## $\color{gold} \large \text{Prerequisites}$
 - One domain registered on Cloudflare
 - Access to Cloudflare account
 - Telegram Bot token (available from Telegram's BotFather)
 - Cloudflare API key (generate one from Cloudflare dashboard)
 - Account ID of your Cloudflare account
 - User ID of the Telegram account you want to use the bot on (for authentication)
-## Single Command install | BETA 
+## $\color{gold} \large \text{Single Command install | BETA }$
 i will release the final version soon!
 just copy and run and send tokens when it ask for them :
 
