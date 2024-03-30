@@ -5,7 +5,8 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_c = \mathbb{N\infty}}$}$$
 ---
 ---
 # $\color{gold} \large \text{CFW-BOT}$
-> $\color{silver} \large \text{Cloudflare Woker Bot ! No servers needed, just pure Xray link creation, all running smoothly on PythonAnywhere.}$
+> $\color{silver} \large \text{Cloudflare Woker Bot ! No servers needed,}$
+> $\color{silver} \large \text{ just pure Xray link creation, all running smoothly on PythonAnywhere.}$
 > $\color{silver} \large \text{A Shortcut to internet freedom ✨}$
 
 [**![Lang_farsi](https://user-images.githubusercontent.com/125398461/234186932-52f1fa82-52c6-417f-8b37-08fe9250a55f.png) توضیحات فارسی**](README-FA.md)
