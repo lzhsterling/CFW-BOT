@@ -42,7 +42,7 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_c = \mathbb{N\infty}}$}$$
 - [Note](#note)
 - [Disclaimer](#disclaimer)
 
-# $\color{gold} \large \text{What is this ?}$
+## $\color{gold} \large \text{What is this ?}$
 This Python Telegram bot, powered by Cloudflare's Workers, makes generating Xray links a breeze! No need for complex server setups, just follow these simple steps to get started:
 ## $\color{gold} \large \text{Features}$
 - **Easy Setup**: No server configurations required. With Cloudflare's Workers, deploying the bot is a breeze.
@@ -106,7 +106,7 @@ $\color{silver} \normalsize \text{10. Start the bot:}$
  ```
 ## $\color{gold} \large \text{ADVANCED INSTALL}$
 
-1. install requirements:
+$\color{silver} \normalsize \text{1. install requirements:}$
  ```bash
  pip install telebot
  pip install pytelegrambotapi --upgrade
@@ -114,24 +114,24 @@ $\color{silver} \normalsize \text{10. Start the bot:}$
  pip install requests
  pip install python-dotenv
  ```
-2. install NVM
+$\color{silver} \normalsize \text{2. install NVM}$
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
-3. set nvm settings
+$\color{silver} \normalsize \text{3. set nvm settings}$
 ``` bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads NVM
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads NVM bash completion
 ```
-4. start nvm and install wrangler
+$\color{silver} \normalsize \text{4. start nvm and install wrangler}$
 ```bash
 nvm install 16.17.0
 nvm use 16.17.0
 npm install wrangler@latest
 npx wrangler --version
 ```
-5. set .env file variables
+$\color{silver} \normalsize \text{5. set .env file variables}$
 
 
 | Variable             | Description                                            |
@@ -142,13 +142,24 @@ npx wrangler --version
 | ADMIN_USER_ID        | Numeric Telegram user ID for admin authentication      |
 | IP_API               | use this as refrence [CFW_Worker_Sub/main/ips.txt](https://raw.githubusercontent.com/2ri4eUI/CFW_Worker_Sub/main/ips.txt)|
 
-6.remember to set cloudflare account id in workertemp.txt 
+$\color{silver} \normalsize \text{6. Remember to set cloudflare account id in workertemp.txt }$
 
 
-## How To Use the Bot
+## $\color{gold} \large \text{How To Use the Bot}$
 Once the bot is running, simply send the necessary commands to generate Xray links right from your Telegram app!
 Creating a new user is a straightforward process. Follow these steps to get started:
 **Obtain Cloudflare IP or Domain:**
+
+#### **Please wait**
+Forget about this method and the rest of the foolish websites.
+
+At this stage, you have two options for entering the IP address in the CFW-BOT:
+
+1- Using a Cloudflare clean IP: This type of IP will make you have good download speed and ping, but sites that use Cloudflare's CDN will not load for you. The method of finding a clean IP is explained here. [link to article](https://github.com/NiREvil/CFW-BOT/blob/main/CFW_Worker_Sub.md)
+
+2- Using a proxyIP: This type of IP may have about ten percent lower speed compared to Cloudflare IP's, and it may be filtered after one or two months, forcing you to change it. However, the advantage is that all sites, even those behind Cloudflare, open easily and without problems. I have written here an easy and fast way to find proxyIP. [link to article](https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md)
+
+otherwise:
    - Use platforms like [fofa.info](https://fofa.info) to find Cloudflare IP addresses or domains.
    - Example search query for fofa.info:
  ```bash
@@ -157,10 +168,10 @@ Creating a new user is a straightforward process. Follow these steps to get star
  ```
    - Choose based on your preferences and network speed.
 
-## Note
+## $\color{gold} \large \text{NOTE}$
 This bot is designed to be lightweight and inexpensive to run, making it accessible for everyone. Enjoy creating Xray links hassle-free!
 
 
-## Disclaimer
+## $\color{gold} \large \text{Disclaimer}$
 
 I want to acknowledge the work of others and clarify that the `index.js` and `subworker.js` file is not my original work. It has been edited solely to ensure compatibility with the bot. 
