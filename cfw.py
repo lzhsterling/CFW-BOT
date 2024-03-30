@@ -50,7 +50,7 @@ def send_welcome(message):
     menu_markup.add(add_user_button, user_panel_button)  
     menu_markup.add(subscriptions_button)
     menu_markup.add(proxy_txt_button)
-    welcome_message = "Welcome to CFW-Bot (v0.03)!\n🤍🤍 FREEDOM TO DREAM 🤍🤍 \n "
+    welcome_message = "Welcome to C-F-W Bot (v0.03)!\n ✌️ RISE AND FIGHT FOR FREEDOM ✌️ !\n "
     
     bot.send_message(message.chat.id, welcome_message, reply_markup=menu_markup)
 
@@ -204,13 +204,13 @@ def user_info_callback(call):
         vless_link = create_vless_config(subdomain, uuid, user_name)
         nontls_config = create_nontls_config(subdomain, uuid, user_name)
         sub_link = f"https://sub{subdomain}/{user_name}"
-        message_text = f"<b>🔰USER INFO🔰</b>\n\n"
+        message_text = f"<b>🎭USER INFO🎭</b>\n\n"
         message_text += f"👤 <b>Name:</b> {user_name}\n"
         message_text += f"🔑 <b>UUID:</b> {uuid}\n"
         message_text += f"🌐 <b>IP:</b> {ip}\n"
         message_text += f"📡 <b>Subdomain:</b> {subdomain}\n\n"
-        message_text += f"🔒 TLS: <code>{vless_link}</code>\n\n"
-        message_text += f"🔓 NO TLS: <code>{nontls_config}</code>\n\n"
+        message_text += f"🔒tls: <code>{vless_link}</code>\n\n"
+        message_text += f"🔓notls: <code>{nontls_config}</code>\n\n"
         message_text += f"📋: <code>{sub_link}</code>"
 
         keyboard = InlineKeyboardMarkup()
@@ -499,7 +499,7 @@ def qr_vless(call):
     qr_tls_img.save(img_tls_bytes, format='PNG')
     img_tls_bytes.seek(0)
 
-    bot.send_photo(call.message.chat.id, img_tls_bytes, caption="With TLS \n\n🤳 Scan Me! ")
+    bot.send_photo(call.message.chat.id, img_tls_bytes, caption="With TLS \n\n🤳 Scan Me! 🤳")
 
 
     nontls_config = create_nontls_config(subdomain, uuid, user_name)
@@ -513,7 +513,7 @@ def qr_vless(call):
     qr_nontls_img.save(img_nontls_bytes, format='PNG')
     img_nontls_bytes.seek(0)
 
-    bot.send_photo(call.message.chat.id, img_nontls_bytes, caption="Without TLS \n\n🤳 Scan Me! ")
+    bot.send_photo(call.message.chat.id, img_nontls_bytes, caption="Without TLS \n\n🤳 Scan Me! 🤳")
 
     del img_tls_bytes
     del img_nontls_bytes
@@ -681,7 +681,7 @@ def handle_filename(message):
             keyboard.add(InlineKeyboardButton(option, callback_data=f"selected_ip:{option}"))
 
         if options:
-            proxy_message = bot.send_message(message.chat.id, "Please select one of the following options or send a new Cloudflare Ip or Domain:", reply_markup=keyboard)
+            proxy_message = bot.send_message(message.chat.id, "Please select one of the following options or send a new Cloudflare Ip or Domain 🗿 proxyIP is better. 🗿", reply_markup=keyboard)
             proxy_message_id = proxy_message.message_id
         else:
             bot.send_message(message.chat.id, "There are no available options. Please enter a new option.")
