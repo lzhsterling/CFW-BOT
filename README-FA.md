@@ -1,8 +1,13 @@
-[🇬🇧Explain in English](README.md)
+---
 
-# CFW-BOT
-> Cloudflare workers bot
+$$\color{silver} \Huge \text{\R $\sum{\vil_c = \mathbb{N\infty}}$}$$
 
+---
+---
+# $\color{gold} \large \text{CFW-BOT}$
+> $\color{silver} \large \text{Cloudflare workers bot}$
+
+[🇬🇧 Dive into the English descriptions](README.md)
 ### ربات تلگرام برای ایجاد وورکر و کانفیگ‌های v2ray‌ بر بستر کلادفلر
 
 بدون نیاز به سرور، به راحتی میتونید هر تعداد کانفیگ vless-ws-tls که خواستید بسازید، با چند کلیک از داخل ربات، این قطعه کد پایتون در phytonanywhere یا هر سرویس دیگه‌ای که از پایتون میزبانی بکنه میشه اجرا کرد.
