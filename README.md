@@ -16,7 +16,7 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_c = \mathbb{N\infty}}$}$$
 </p>
 
 
-# $\color{gold} \large \text{New changes in the latest version!!}$
+## $\color{gold} \large \text{New changes in the latest version!!}$
 - added proxies.txt , now you can create your favorite proxy list in bot
 - access to your favorite proxy while adding new user or changing users proxies
 - access to recently used proxies
@@ -91,15 +91,15 @@ $\color{silver} \normalsize \text{you can run this to solve the issue:}$
  ```bash
  python3 dos2unix.py
  ```
-10. Run `install.py` and provide the required API tokens when prompted:
+$\color{silver} \normalsize \text{9. Run `install.py and provide the required API tokens when prompted:}$
  ```bash
  python3 install.py
  ```
-11. Start the bot:
+$\color{silver} \normalsize \text{10. Start the bot:}$
  ```bash
  python3 cfw.py
  ```
-## ADVANCED INSTALL
+## $\color{gold} \large \text{ADVANCED INSTALL}$
 
 1. install requirements:
  ```bash
