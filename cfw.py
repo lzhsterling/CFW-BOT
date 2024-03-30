@@ -65,7 +65,7 @@ def proxylist(call):
     else:
         bot.send_message(call.message.chat.id, "No proxies found in proxies.txt.")
     
-    bot.send_message(call.message.chat.id, "Please send NEW list of favorite proxies, each on a separate line. For Example: \nworkers.cloudflare.cyou \nOR this one: \ncdn.xn--b6gac.eu.org.\n\n you can use them for creating user or changing proxies")
+    bot.send_message(call.message.chat.id, "Please send NEW list of favorite proxies, each on a separate line.\n\n you can use them for creating user or changing proxies")
     bot.register_next_step_handler(call.message, handle_proxies_input)
 
 def handle_proxies_input(message):
