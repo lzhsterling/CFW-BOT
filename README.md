@@ -62,7 +62,7 @@ $\color{silver} \normalsize \text{just copy and run and send tokens when it ask 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/NiREvil/CFW-BOT/main/install.sh)"
 ```
-## $\color{gold} \large \text{LAZY INSTALL}$
+# $\color{gold} \large \text{LAZY INSTALL}$
 1. Register for a free account on [PythonAnywhere](https://www.pythonanywhere.com).
 2. Obtain the required API keys:
    - Telegram Bot token from BotFather
