@@ -6,7 +6,9 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_c = \mathbb{N\infty}}$}$$
 ---
 # $\color{gold} \large \text{CFW-BOT}$
 > $\color{silver} \large \text{Cloudflare Woker Bot ! No servers needed,}$
-> $\color{silver} \large \text{ just pure Xray link creation, all running smoothly on PythonAnywhere.}$
+> $\color{silver} \large \text{just pure Xray link creation,}$
+> $\color{silver} \large \text{All running smoothly on PythonAnywhere.}$
+> 
 > $\color{silver} \large \text{A Shortcut to internet freedom ✨}$
 
 [**![Lang_farsi](https://user-images.githubusercontent.com/125398461/234186932-52f1fa82-52c6-417f-8b37-08fe9250a55f.png) توضیحات فارسی**](README-FA.md)
@@ -86,8 +88,10 @@ $\color{silver} \normalsize \text{7. Run `requirement.sh:}$
  ```bash
  ./requirement.sh
  ```
-$\color{silver} \normalsize \text{"If you encounter errors running requirement.sh on PythonAnywhere }$, simply close the console (using `exit` command) , go to file manager and open it and  save it (use `ctrl+s` ) $\color{silver} \normalsize \text{without changing any thing. thats it! now you can run it"}$
-$\color{silver} \normalsize \text{another solution is converting it using dos2unix, since PythonAnyWhere does not support that you can use this simple python code 'dos2unix.py}$
+$\color{silver} \normalsize \text{"If you encounter errors running requirement.sh on PythonAnywhere }$,
+simply close the console (using `exit` command) , go to file manager and open it and  save it (use `ctrl+s` ) without changing any thing. thats it! now you can run it"
+another solution is converting it using dos2unix, since PythonAnyWhere does not support that you can use this simple python code `dos2unix.py`
+
 $\color{silver} \normalsize \text{you can run this to solve the issue:}$
  ```bash
  python3 dos2unix.py
