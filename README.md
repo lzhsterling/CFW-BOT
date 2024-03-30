@@ -55,42 +55,39 @@ This Python Telegram bot, powered by Cloudflare's Workers, makes generating Xray
 - Account ID of your Cloudflare account
 - User ID of the Telegram account you want to use the bot on (for authentication)
 ## $\color{gold} \large \text{Single Command install | BETA }$
-i will release the final version soon!
-just copy and run and send tokens when it ask for them :
-
+$\color{silver} \normalsize \text{just copy and run and send tokens when it ask for them:}$
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/NiREvil/CFW-BOT/main/install.sh)"
 ```
-## LAZY INSTALL
+## $\color{gold} \large \text{LAZY INSTALL}$
 1. Register for a free account on [PythonAnywhere](https://www.pythonanywhere.com).
 2. Obtain the required API keys:
    - Telegram Bot token from BotFather
    - Cloudflare API key from Cloudflare dashboard (make sure to select "Edit Cloudflare Workers template" and grant necessary permissions, all of them should have EDIT permission)
    - Telegram UserID you can obtain it from here https://t.me/useridinfobot or any similar bot you know
    - Cloudflare Account id, you can find it from right side of overview page or worker page in cloudflare
-4. in your Dashboard section Select Files and and Click on "Open Bash Console Here"
-5.  Clone this repository:
+3. in your Dashboard section Select Files and and Click on "Open Bash Console Here"
+4. $\color{silver} \normalsize \text{Clone this repository:}$
  ```bash
  git clone https://github.com/NiREvil/CFW-BOT.git
 ```
-6. Navigate to the project directory:
+$\color{silver} \normalsize \text{5. Navigate to the project directory:}$
 
  ```bash
  cd CFW-BOT
  ```
-7. Make `requirement.sh` executable:
+$\color{silver} \normalsize \text{6. Make `requirement.sh executable:}$
  ```bash
  chmod +x requirement.sh
  ```
 
-8. Run `requirement.sh`:
+$\color{silver} \normalsize \text{7. Run `requirement.sh:}$
  ```bash
  ./requirement.sh
  ```
-"If you encounter errors running requirement.sh on PythonAnywhere , simply close the console (using `exit` command) , go to file manager and open it and  save it (use `ctrl+s` ) without changing any thing. thats it! now you can run it"
-another solution is converting it using dos2unix 
-since PythonAnyWhere does not support that you can use this simple python code 'dos2unix.py'
-you can run this to solve the issue:
+$\color{silver} \normalsize \text{"If you encounter errors running requirement.sh on PythonAnywhere }$, simply close the console (using `exit` command) , go to file manager and open it and  save it (use `ctrl+s` ) $\color{silver} \normalsize \text{without changing any thing. thats it! now you can run it"}$
+$\color{silver} \normalsize \text{another solution is converting it using dos2unix, since PythonAnyWhere does not support that you can use this simple python code 'dos2unix.py}$
+$\color{silver} \normalsize \text{you can run this to solve the issue:}$
  ```bash
  python3 dos2unix.py
  ```
