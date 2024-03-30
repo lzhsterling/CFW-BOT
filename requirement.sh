@@ -28,7 +28,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
 . ~/.nvm/nvm.sh
 
-nvm install 18.17.0
+nvm install 16.17.0
 
 echo -e '\nexport NVM_DIR="$HOME/.nvm"' >> ~/.bashrc
 echo -e '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"' >> ~/.bashrc
